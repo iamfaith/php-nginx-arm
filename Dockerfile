@@ -17,10 +17,10 @@ COPY config/php.ini /etc/php7/conf.d/zzz_custom.ini
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Make sure files/folders needed by the processes are accessable when they run under the nobody user
-RUN chown -R apache:apache /run && \
-  chown -R apache:apache /var/lib/nginx && \
-  chown -R apache:apache /var/tmp/nginx && \
-  chown -R apache:apache /var/log/nginx
+#RUN chown -R apache:apache /run && \
+#  chown -R apache:apache /var/lib/nginx && \
+#  chown -R apache:apache /var/tmp/nginx && \
+#  chown -R apache:apache /var/log/nginx
 
 # Setup document root
 RUN mkdir -p /var/www/html
@@ -29,7 +29,7 @@ RUN rm -rf /var/lib/apt/lists/*;\
     apt-get clean
     
 # Switch to use a non-root user from here on
-USER apache
+# USER apache
 
 # Add application
 WORKDIR /var/www/html
