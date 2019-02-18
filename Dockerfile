@@ -1,6 +1,6 @@
-FROM alpine:3.9
-LABEL Maintainer="Tim de Pater <code@trafex.nl>" \
-      Description="Lightweight container with Nginx 1.14 & PHP-FPM 7.2 based on Alpine Linux."
+FROM xianzixiang/xenial
+LABEL Maintainer="faith" \
+      Description="Lightweight container with Nginx 1.14 & PHP-FPM 7.2 based on xenial."
 
 # Install packages
 RUN apk --no-cache add php7 php7-fpm php7-mysqli php7-json php7-openssl php7-curl \
