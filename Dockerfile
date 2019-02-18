@@ -29,11 +29,11 @@ RUN rm -rf /var/lib/apt/lists/*;\
     apt-get clean
     
 # Switch to use a non-root user from here on
-USER nobody
+USER apache
 
 # Add application
 WORKDIR /var/www/html
-COPY --chown=nobody src/ /var/www/html/
+COPY --chown=apache src/ /var/www/html/
 
 # Expose the port nginx is reachable on
 EXPOSE 8080
