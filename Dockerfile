@@ -38,7 +38,7 @@ COPY src/ /var/www/html/
 # Expose the port nginx is reachable on
 EXPOSE 8080
 
-ENTRYPOINT ["/usr/bin/supervisord"]
+# ENTRYPOINT ["/usr/bin/supervisord"]
 
 # Let supervisord start nginx & php-fpm
 CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
