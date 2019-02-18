@@ -3,8 +3,7 @@ LABEL Maintainer="faith" \
       Description="Lightweight container with Nginx 1.14 & PHP-FPM 7.2 based on xenial."
 
 # Install packages
-RUN 
-    apt-get update; \
+RUN apt-get update; \
     apt-get install -y php7.0 php7.0-fpm php7.0-mysql nginx supervisor
 
 # Configure nginx
