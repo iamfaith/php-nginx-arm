@@ -1,4 +1,4 @@
-FROM xianzixiang/xenial
+FROM xianzixiang/py3
 LABEL Maintainer="faith" \
       Description="Lightweight container with Nginx 1.14 & PHP-FPM 7.2 based on xenial."
 
