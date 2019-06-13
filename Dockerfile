@@ -6,6 +6,8 @@ LABEL Maintainer="faith" \
 RUN apt-get update; \
     apt-get install -y php7.0 php7.0-fpm php7.0-mysql nginx supervisor
 
+RUN apt install --reinstall software-properties-common && apt-get update && apt-get install php7.0-curl
+
 # Configure nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
