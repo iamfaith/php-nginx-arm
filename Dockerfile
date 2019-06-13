@@ -1,4 +1,4 @@
-FROM xianzixiang/py2
+FROM resin/raspberrypi3-debian:stretch
 LABEL Maintainer="faith" \
       Description="Lightweight container with Nginx 1.14 & PHP-FPM 7.2 based on xenial."
 
