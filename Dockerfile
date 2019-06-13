@@ -8,6 +8,8 @@ RUN apt-get update; \
 
 RUN apt install --reinstall software-properties-common && apt-get update && apt-get install php7.0-curl
 
+RUN apt install php-mbstring.x86_64
+
 # Configure nginx
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
