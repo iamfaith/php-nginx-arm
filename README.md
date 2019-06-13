@@ -35,6 +35,6 @@ Start the Docker container:
 
     docker run -p 80:8080 trafex/alpine-nginx-php7
 
-    sudo docker run -d -p 8080:8080 --restart=always -v $(pwd):/var/www/html -ti --name php-nginx xianzixiang/php-nginx
+    sudo docker run -d -p 8080:8080 --restart=always -v $(pwd):/var/www/html -ti --name php-nginx xianzixiang/php-nginx-arm
    
 See the PHP info on http://localhost, or the static html page on http://localhost/test.html
